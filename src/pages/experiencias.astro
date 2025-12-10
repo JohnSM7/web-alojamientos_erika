@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Experiencias Locales">
+    <div class="container mx-auto px-6 py-24">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h1 class="text-4xl font-light uppercase tracking-widest mb-6">Más allá del alojamiento</h1>
+            <p class="text-lg text-gray-600 font-light">
+                Descubre las actividades que harán de tu estancia un recuerdo inolvidable. Conectamos contigo con lo mejor del entorno local.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition border border-gray-100">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-gray-900">Rutas de Senderismo</h3>
+                <p class="text-gray-600 font-light">
+                    Explora caminos secretos y miradores espectaculares. Te facilitamos mapas y guías locales.
+                </p>
+            </div>
+
+             <div class="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition border border-gray-100">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-gray-900">Gastronomía Local</h3>
+                <p class="text-gray-600 font-light">
+                    Reserva en los mejores restaurantes de kilómetro cero o disfruta de una cata de vinos privados en la villa.
+                </p>
+            </div>
+
+             <div class="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition border border-gray-100">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 text-gray-900">Bienestar y Yoga</h3>
+                <p class="text-gray-600 font-light">
+                    Sesiones de yoga al amanecer en la terraza o masajes relajantes a domicilio bajo petición.
+                </p>
+            </div>
+        </div>
+    </div>
+</BaseLayout>

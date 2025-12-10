@@ -1,0 +1,17 @@
+---
+// src/components/Footer.astro
+const today = new Date();
+---
+
+<footer class="bg-gray-50 text-gray-500 py-12 mt-20 border-t border-gray-100 font-light text-sm">
+  <div class="container mx-auto px-6 text-center md:text-left md:flex justify-between items-center">
+    <div class="mb-4 md:mb-0">
+      <p>&copy; {today.getFullYear()} Tane Solutions</p>
+      <p class="mt-2">Todos los derechos reservados</p>
+    </div>
+    <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center md:text-right">
+        <a href="#" class="hover:text-gray-800 transition">Aviso Legal</a>
+        <a href="#" class="hover:text-gray-800 transition">Política de Privacidad</a>
+    </div>
+  </div>
+</footer>

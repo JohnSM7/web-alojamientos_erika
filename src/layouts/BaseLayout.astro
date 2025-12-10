@@ -1,0 +1,27 @@
+---
+// src/layouts/BaseLayout.astro
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+import '../styles/global.css';
+
+const { title } = Astro.props;
+---
+
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Vacaciones Relax</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+  
+  <body class="bg-white text-gray-600 font-['Outfit',sans-serif] pt-16 antialiased leading-relaxed"> 
+    <Header />
+    <main>
+      <slot /> </main>
+    <Footer />
+  </body>
+</html>

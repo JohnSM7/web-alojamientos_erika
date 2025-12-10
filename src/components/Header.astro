@@ -1,0 +1,43 @@
+---
+// src/components/Header.astro
+import { getCollection } from 'astro:content';
+// Obtenemos los alojamientos para el desplegable
+const alojamientos = await getCollection('alojamientos');
+---
+
+<header class="bg-white border-b border-gray-100 fixed w-full z-50 top-0">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="/" class="text-2xl font-light tracking-widest text-gray-800 uppercase">
+      Tu<span class="font-bold">Marca</span>
+    </a>
+
+    <ul class="hidden md:flex space-x-8 text-gray-600 font-light text-sm uppercase tracking-wider items-center">
+      <li><a href="/" class="hover:text-gray-900 transition">Inicio</a></li>
+      
+      <li class="relative group">
+        <button class="hover:text-gray-900 transition flex items-center focus:outline-none">
+          Alojamientos
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          {alojamientos.map((casa) => (
+             <a href={`/alojamientos/${casa.slug}`} class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 capitalize">
+              {casa.data.title}
+            </a>
+          ))}
+        </div>
+      </li>
+
+      <li><a href="/experiencias" class="hover:text-gray-900 transition">Experiencias</a></li>
+      <li><a href="/contacto" class="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition">Contacto</a></li>
+    </ul>
+
+    <button class="md:hidden text-gray-600 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </nav>
+</header>

@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* Opcional: Estilos base para que se vea más limpio */
+html, body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
