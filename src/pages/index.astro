@@ -8,47 +8,61 @@ const allAlojamientos = await getCollection('alojamientos');
 ---
 
 <BaseLayout title="Inicio">
-  
-  <section class="relative h-[80vh] flex items-center justify-center bg-gray-100 overflow-hidden">
+  <section
+    class="relative h-[80vh] flex items-center justify-center bg-gray-100 overflow-hidden"
+  >
     <div class="absolute inset-0 z-0">
-        <img src="/images/hero.jpg" alt="Paisaje relajante" class="w-full h-full object-cover opacity-90" />
-        <div class="absolute inset-0 bg-white/30 backdrop-blur-[2px]"></div> </div>
-    
+      <img
+        src="/images/imagenPrincipal.png"
+        alt="Paisaje relajante"
+        class="w-full h-full object-cover opacity-90"
+      />
+      <div class="absolute inset-0 bg-white/30 backdrop-blur-[2px]"></div>
+    </div>
+
     <div class="relative z-10 text-center max-w-3xl px-6">
-        <h1 class="text-4xl md:text-6xl font-light text-gray-900 mb-6 tracking-tight">
-            Encuentra tu <span class="font-semibold">paz</span> interior.
-        </h1>
-        <p class="text-xl text-gray-700 mb-10 font-light">
-            Alojamientos exclusivos en entornos únicos. Minimalismo, confort y naturaleza.
-        </p>
-        <a href="#nuestros-alojamientos" class="bg-white text-gray-900 px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition text-sm uppercase tracking-widest font-medium">
-            Explorar Destinos
-        </a>
+      <h1
+        class="text-4xl md:text-6xl font-light text-gray-900 mb-6 tracking-tight"
+      >
+        Encuentra tu <span class="font-semibold">paz</span> interior.
+      </h1>
+      <p class="text-xl text-gray-700 mb-10 font-light">
+        Alojamientos exclusivos en entornos únicos. Minimalismo, confort y
+        naturaleza.
+      </p>
+      <a
+        href="#nuestros-alojamientos"
+        class="bg-white text-gray-900 px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition text-sm uppercase tracking-widest font-medium"
+      >
+        Explorar Destinos
+      </a>
     </div>
   </section>
 
   <section id="nuestros-alojamientos" class="py-24 bg-gray-50">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-light uppercase tracking-widest mb-4">Nuestros Alojamientos</h2>
-            <div class="w-24 h-1 bg-gray-200 mx-auto"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {allAlojamientos.map(casa => (
-                <AccommodationCard slug={casa.slug} data={casa.data} />
-            ))}
-        </div>
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-light uppercase tracking-widest mb-4">
+          Nuestros Alojamientos
+        </h2>
+        <div class="w-24 h-1 bg-gray-200 mx-auto"></div>
       </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        {allAlojamientos.map(casa => (
+        <AccommodationCard slug="{casa.slug}" data="{casa.data}" />
+        ))}
+      </div>
+    </div>
   </section>
 
   <section class="py-24 bg-white">
-      <div class="container mx-auto px-6 text-center max-w-4xl">
-          <h2 class="text-2xl font-light mb-8">La Simplicidad del Buen Vivir</h2>
-          <p class="text-lg text-gray-600 font-light">
-              Seleccionamos espacios donde la luz, el silencio y el diseño se unen para ofrecerte una experiencia reparadora. Menos ruido, más descanso.
-          </p>
-      </div>
+    <div class="container mx-auto px-6 text-center max-w-4xl">
+      <h2 class="text-2xl font-light mb-8">La Simplicidad del Buen Vivir</h2>
+      <p class="text-lg text-gray-600 font-light">
+        Seleccionamos espacios donde la luz, el silencio y el diseño se unen
+        para ofrecerte una experiencia reparadora. Menos ruido, más descanso.
+      </p>
+    </div>
   </section>
-
 </BaseLayout>
